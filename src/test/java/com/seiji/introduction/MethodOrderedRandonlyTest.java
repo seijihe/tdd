@@ -1,4 +1,4 @@
-package com.seiji;
+package com.seiji.introduction;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.MethodOrderer;

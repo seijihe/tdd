@@ -1,4 +1,4 @@
-package com.seiji;
+package com.seiji.introduction;
 
 public class SimpleMath {
 
