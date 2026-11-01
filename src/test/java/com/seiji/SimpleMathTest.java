@@ -1,10 +1,32 @@
 package com.seiji;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 
 public class SimpleMathTest {
+
+    SimpleMath math;
+
+    @BeforeAll
+    static void setup() {
+        IO.println("Running @BeforeAll method!");
+    }
+
+    @AfterAll 
+    static void cleanup() {
+        IO.print("Running @AfterAll method!");
+    }
+
+    @BeforeEach 
+    void beforeEachMethod() {
+        IO.println("Running @BeforeEach method!");
+        math = new  SimpleMath();
+    }
 
     // @Disabled("TODO: We still need work on it") // Until Comment @Test to disable the test
     @Test // test[System_Under_Test]_[Condition_or_State_Chance]_[Expected_Result]
@@ -13,7 +35,6 @@ public class SimpleMathTest {
 
         // Behavior-Driven-Developmend and AAA (Triple A)
         // Given | Arrange
-        SimpleMath math = new SimpleMath();
         double firstNumber = 6.2D;
         double secondNumber = 2D;
         double expected = 8.2D;
@@ -31,7 +52,6 @@ public class SimpleMathTest {
     @Test 
     @DisplayName("Divide by OD")
     void testDivide_When_ItsZeroDouble() {
-        SimpleMath math = new SimpleMath();
         double firstNumber = 6.2D;
         double secondNumber = 0D;
         String expectedMessage = "Impossible to divide by zero";
@@ -46,7 +66,6 @@ public class SimpleMathTest {
     @Test 
     @DisplayName("Test 8 - 9 = -1")
     void testSubtraction_When_EightSubtractNine_ShoudResultMinusOne() {
-        SimpleMath math = new SimpleMath();
 
         double firstNumber = 8D;
         double secondNumber = 9D;
@@ -61,7 +80,6 @@ public class SimpleMathTest {
     @Test
     @DisplayName("Test 4 x 5 = 20")
     void testMultiply_When_FourMultipliedForFive_ShoudReturnTwenty() {
-        SimpleMath math = new SimpleMath();
 
         double firstNumber = 4D;
         double secondNumber = 5D;
@@ -76,7 +94,6 @@ public class SimpleMathTest {
     @Test
     @DisplayName("Test 4 / 5 = 0.8")
     void testDivision_When_FourDividedByFive_ShoudReturnZeroDotEight() {
-        SimpleMath math = new SimpleMath();
 
         double firstNumber = 4D;
         double secondNumber = 5D;
@@ -91,7 +108,6 @@ public class SimpleMathTest {
     @Test
     @DisplayName("Test (4 + 5) / 2 = 4.5")
     void testMean_When_FourAndFivenMean_ShoudResultFourDotFive() {
-        SimpleMath math = new SimpleMath();
 
         double firstNumber = 4D;
         double secondNumber = 5D;
@@ -106,7 +122,6 @@ public class SimpleMathTest {
     @Test
     @DisplayName("Test Square(4) = 2")
     void testSquareRoot_When_SquareOfFour_ShoudReturnTwo() {
-        SimpleMath math = new SimpleMath();
 
         double firstNumber = 4D;
 
