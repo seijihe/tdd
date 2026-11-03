@@ -1,4 +1,4 @@
-package com.seiji.project;
+package com.seiji.workspace.tdd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -7,9 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import com.seiji.model.Person;
-import com.seiji.service.IPersonService;
-import com.seiji.service.PersonService;
+
+import com.seiji.wokspace.tdd.model.Person;
+import com.seiji.wokspace.tdd.service.IPersonService;
+import com.seiji.wokspace.tdd.service.PersonService;
 
 public class PersonServiceTest {
 

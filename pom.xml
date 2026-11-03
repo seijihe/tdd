@@ -5,12 +5,17 @@
     <name>tdd</name>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-        <java.version>25</java.version>
-        <junit.version>6.1.3</junit.version>
+        <java.version>26</java.version>
+        <maven.compiler.release>25</maven.compiler.release>
         <maven.compiler.plugin.version>3.10.1</maven.compiler.plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>6.1.3</junit.version>
+        <mockito.test>5.24.0</mockito.test>
+        <assertj.version>3.27.7</assertj.version>
     </properties>
     
     <dependencies>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -19,16 +24,33 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.6.1</version>
-            <scope>compile</scope>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.test}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
     
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.6.1</version>
+            </plugin>
         </plugins>
     </build>
 

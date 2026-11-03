@@ -1,4 +1,4 @@
-package com.seiji.introduction;
+package com.seiji.wokspace.junit;
 
 public class SimpleMath {
 

@@ -1,6 +1,6 @@
-package com.seiji.service;
+package com.seiji.wokspace.tdd.service;
 
-import com.seiji.model.Person;
+import com.seiji.wokspace.tdd.model.Person;
 
 public interface IPersonService {
     

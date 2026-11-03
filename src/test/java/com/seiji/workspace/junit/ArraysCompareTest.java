@@ -1,4 +1,4 @@
-package com.seiji.introduction;
+package com.seiji.workspace.junit;
 
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import java.util.ArrayList;

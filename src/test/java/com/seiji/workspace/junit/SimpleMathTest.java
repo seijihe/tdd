@@ -1,10 +1,10 @@
-package com.seiji.introduction;
+package com.seiji.workspace.junit;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import com.seiji.wokspace.junit.SimpleMath;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -28,7 +28,7 @@ public class SimpleMathTest {
         math = new  SimpleMath();
     }
 
-    // @Disabled("TODO: We still need work on it") // Until Comment @Test to disable the test
+    // @Disabled("TOD O: We still need work on it") // Until Comment @Test to disable the test
     @Test // test[System_Under_Test]_[Condition_or_State_Chance]_[Expected_Result]
     @DisplayName("Test 6.2 + 2 = 8.2") // Until label method by a huge name
     void testSum_When_SixDotTwoIsAddedByTwo_ShouldReturnEightDotTwo() { 

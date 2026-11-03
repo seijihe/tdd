@@ -1,4 +1,4 @@
-package com.seiji.model;
+package com.seiji.wokspace.tdd.model;
 
 import java.io.Serializable;
 
